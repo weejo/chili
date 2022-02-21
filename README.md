@@ -1,2 +1,2 @@
-# gbe
-The legendary GummyBearEngine
+# chili
+The legendary chili game engine
