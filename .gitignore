@@ -5,3 +5,5 @@
 /bin~int/Debug~x64
 /bin/Debug~x64
 /.vs/ChiliEngine/v16
+/bin-int/Debug-windows-x86_64
+/bin/Debug-windows-x86_64

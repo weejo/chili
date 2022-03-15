@@ -1,6 +1,7 @@
 #pragma once
 #include "Core.h"
 #include "spdlog\spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 
 namespace Chili {
@@ -20,14 +21,14 @@ namespace Chili {
 	};
 }
 
-#define CH_CORE_TRACE(...) :::Chili::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define CH_CORE_INFO(...) :::Chili::Log::GetCoreLogger()->info(__VA_ARGS__)
-#define CH_CORE_WARN(...) :::Chili::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define CH_CORE_ERROR(...) :::Chili::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define CH_CORE_FATAL(...) :::Chili::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define CH_CORE_TRACE(...)	::Chili::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define CH_CORE_INFO(...)	::Chili::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define CH_CORE_WARN(...)	::Chili::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define CH_CORE_ERROR(...)	::Chili::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define CH_CORE_FATAL(...)	::Chili::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
-#define CH_TRACE(...) :::Chili::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define CH_INFO(...) :::Chili::Log::GetClientLogger()->info(__VA_ARGS__)
-#define CH_WARN(...) :::Chili::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define CH_ERROR(...) :::Chili::Log::GetClientLogger()->error(__VA_ARGS__)
-#define CH_FATAL(...) :::Chili::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define CH_TRACE(...)	::Chili::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define CH_INFO(...)	::Chili::Log::GetClientLogger()->info(__VA_ARGS__)
+#define CH_WARN(...)	::Chili::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define CH_ERROR(...)	::Chili::Log::GetClientLogger()->error(__VA_ARGS__)
+#define CH_FATAL(...)	::Chili::Log::GetClientLogger()->fatal(__VA_ARGS__)
