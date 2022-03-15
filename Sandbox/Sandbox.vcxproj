@@ -120,7 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CH_PLATFORM_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)ChiliEngine\src;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ChiliEngine\src;$(SolutionDir)ChiliEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,7 +135,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CH_PLATFORM_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)ChiliEngine\src;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ChiliEngine\src;$(SolutionDir)ChiliEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

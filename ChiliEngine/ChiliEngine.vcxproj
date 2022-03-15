@@ -59,6 +59,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CH_PLATFORM_WINDOWS;CH_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)ChiliEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,6 +74,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CH_PLATFORM_WINDOWS;CH_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)ChiliEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,12 +84,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Chili\Log.h" />
     <ClInclude Include="src\Chili\Application.h" />
     <ClInclude Include="src\chili.h" />
     <ClInclude Include="src\Chili\Core.h" />
     <ClInclude Include="src\Chili\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Chili\Log.cpp" />
     <ClCompile Include="src\Chili\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
