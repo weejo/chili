@@ -20,6 +20,9 @@ project "ChiliEngine"
 	targetdir ("bin/".. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/".. outputdir .. "/%{prj.name}")
 
+	pchheader "chpch.h"
+	pchsource "ChiliEngine/src/chpch.cpp"
+
 	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
@@ -27,7 +30,7 @@ project "ChiliEngine"
 
 	includedirs	{
 		"%{prj.name}/src",
-		"ChiliEngine/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include"
 	}
 
 	filter "system:windows"
@@ -44,21 +47,15 @@ project "ChiliEngine"
 			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 	filter "configurations:Debug"
-		defines {
-			"CH_DEBUG"
-		}
+		defines "CH_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines {
-			"CH_RELEASE"
-		}
+		defines	"CH_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
-		defines {
-			"CH_DIST"
-		}
+		defines	"CH_DIST"
 		optimize "On"
 
 
@@ -77,8 +74,9 @@ project "Sandbox"
 	}
 
 	includedirs	{
-		"ChiliEngine/src",
-		"ChiliEngine/vendor/spdlog/include"
+		"ChiliEngine/vendor/spdlog/include",
+		"ChiliEngine/src"
+
 	}
 
 	links {
@@ -90,9 +88,7 @@ project "Sandbox"
 		staticruntime "On"
 		systemversion "latest"
 
-		defines {
-		"CH_PLATFORM_WINDOWS"
-		}
+		defines "CH_PLATFORM_WINDOWS"
 
 	filter "configurations:Debug"
 		defines "CH_DEBUG"
@@ -105,7 +101,5 @@ project "Sandbox"
 		optimize "On"
 
 	filter "configurations:Dist"
-		defines {
-			"CH_DIST"
-		}
+		defines "CH_DIST"
 		optimize "On"

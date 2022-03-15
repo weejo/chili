@@ -2,7 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
 
 namespace Chili {
 	class CHILI_API WindowResizeEvent : public Event {

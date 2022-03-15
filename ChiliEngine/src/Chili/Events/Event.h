@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Core.h"
+#include "chpch.h"
+#include "..\Core.h"
 
-#include <string>
-#include <functional>
 
 namespace Chili {
 
