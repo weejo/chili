@@ -11,6 +11,13 @@ workspace "ChiliEngine"
 
 outputdir ="%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Here we add GLFW submodule: First create IncludeDir struct for adding GLFW as include (if we later on add some more this will be easier)
+IncludeDir = {}
+IncludeDir["GLFW"] = "ChiliEngine/vendor/GLFW/include"
+
+-- This actually adds the premake script of GLFW
+include "ChiliEngine/vendor/GLFW"
+
 project "ChiliEngine"
 	location "ChiliEngine"
 	kind "SharedLib"
@@ -31,6 +38,13 @@ project "ChiliEngine"
 	includedirs	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
+		"%{IncludeDir.GLFW}"
+	}
+
+	-- Gotta link the new libraries
+	links {
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
