@@ -7,6 +7,12 @@
     <Filter Include="Chili\Events">
       <UniqueIdentifier>{720649D5-5E69-D879-07EF-1030F330A4FC}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Chili\Application.h">
@@ -33,6 +39,12 @@
     <ClInclude Include="src\Chili\Log.h">
       <Filter>Chili</Filter>
     </ClInclude>
+    <ClInclude Include="src\Chili\Window.h">
+      <Filter>Chili</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\chili.h" />
     <ClInclude Include="src\chpch.h" />
   </ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Chili\Log.cpp">
       <Filter>Chili</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\chpch.cpp" />
   </ItemGroup>

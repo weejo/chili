@@ -12,6 +12,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Chili\Log.h"
 
 
 #ifdef CH_PLATFORM_WINDOWS

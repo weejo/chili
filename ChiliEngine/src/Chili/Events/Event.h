@@ -5,12 +5,8 @@
 
 
 namespace Chili {
-
-	// Events in Hazel are currently blocking, meaning when an event occurs it
-	// immediately gets dispatched and must be dealt with right then an there.
-	// For the future, a better strategy might be to buffer events in an event
-	// bus and process them during the "event" part of the update stage.
-
+	
+	// No implicit conversion and names are local to the Enum 
 	enum class EventType
 	{
 		None = 0,
@@ -20,6 +16,7 @@ namespace Chili {
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
 
+	//Automatically converted to the given BIT definition -> can be used directly in IsInCategory() to check what event category a event is without further knowledge
 	enum EventCategory
 	{
 		None = 0,
@@ -30,6 +27,10 @@ namespace Chili {
 		EventCategoryMouseButton	= BIT(4)
 	};
 
+	/*
+		## is the token pasting operator (also called merging / combining operator) used for combining "EventType::" with the type provided as parameter
+		# is the stringizing operator turning the provided type parameter into a string
+	*/
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
 								virtual EventType GetEventType() const override { return GetStaticType(); }\
 								virtual const char* GetName() const override { return #type; }

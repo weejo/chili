@@ -37,7 +37,7 @@ project "ChiliEngine"
 
 	includedirs	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}"
 	}
 
@@ -46,7 +46,7 @@ project "ChiliEngine"
 		"GLFW",
 		"opengl32.lib"
 	}
-
+	
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
@@ -58,8 +58,10 @@ project "ChiliEngine"
 		}
 
 		postbuildcommands {
+		    ("{MKDIR} ../bin/" .. outputdir .. "/Sandbox"),
 			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
+
 	filter "configurations:Debug"
 		defines "CH_DEBUG"
 		symbols "On"
