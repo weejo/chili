@@ -44,7 +44,7 @@ namespace Chili {
 			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
-	
+
 		m_Window = glfwCreateWindow((int)properties.Width, (int)properties.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
@@ -70,21 +70,21 @@ namespace Chili {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
 			switch (action) {
-				case GLFW_PRESS: {
-					KeyPressedEvent event(key, 0);
-					data.EventCallback(event);
-					break;
-				}
-				case GLFW_RELEASE: {
-					KeyReleasedEvent event(key);
-					data.EventCallback(event);
-					break;
-				}
-				case GLFW_REPEAT: {
-					KeyPressedEvent event(key, 1);
-					data.EventCallback(event);
-					break;
-				}
+			case GLFW_PRESS: {
+				KeyPressedEvent event(key, 0);
+				data.EventCallback(event);
+				break;
+			}
+			case GLFW_RELEASE: {
+				KeyReleasedEvent event(key);
+				data.EventCallback(event);
+				break;
+			}
+			case GLFW_REPEAT: {
+				KeyPressedEvent event(key, 1);
+				data.EventCallback(event);
+				break;
+			}
 			}
 		});
 
@@ -92,16 +92,16 @@ namespace Chili {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
 			switch (action) {
-				case GLFW_PRESS: {
-					MouseButtonPressedEvent event(button);
-					data.EventCallback(event);
-					break;
-				}
-				case GLFW_RELEASE: {
-					MouseButtonReleasedEvent event(button);
-					data.EventCallback(event);
-					break;
-				}
+			case GLFW_PRESS: {
+				MouseButtonPressedEvent event(button);
+				data.EventCallback(event);
+				break;
+			}
+			case GLFW_RELEASE: {
+				MouseButtonReleasedEvent event(button);
+				data.EventCallback(event);
+				break;
+			}
 			}
 		});
 

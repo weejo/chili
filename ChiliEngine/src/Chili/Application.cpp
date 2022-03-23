@@ -9,7 +9,7 @@
 
 namespace Chili {
 
-// makro to bind event functions
+	// makro to bind event functions
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
 
@@ -39,7 +39,7 @@ namespace Chili {
 			m_Window->OnUpdate();
 		}
 	}
-	
+
 	bool Application::OnWindowClose(WindowCloseEvent& e)
 	{
 		m_Running = false;
