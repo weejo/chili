@@ -36,6 +36,12 @@
     <ClInclude Include="src\Chili\Events\MouseEvent.h">
       <Filter>Chili\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Chili\Layer.h">
+      <Filter>Chili</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Chili\LayerStack.h">
+      <Filter>Chili</Filter>
+    </ClInclude>
     <ClInclude Include="src\Chili\Log.h">
       <Filter>Chili</Filter>
     </ClInclude>
@@ -47,15 +53,15 @@
     </ClInclude>
     <ClInclude Include="src\chili.h" />
     <ClInclude Include="src\chpch.h" />
-    <ClInclude Include="Layer.h">
-      <Filter>Chili</Filter>
-    </ClInclude>
-    <ClInclude Include="LayerStack.h">
-      <Filter>Chili</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Chili\Application.cpp">
+      <Filter>Chili</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Chili\Layer.cpp">
+      <Filter>Chili</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Chili\LayerStack.cpp">
       <Filter>Chili</Filter>
     </ClCompile>
     <ClCompile Include="src\Chili\Log.cpp">
@@ -65,11 +71,5 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\chpch.cpp" />
-    <ClCompile Include="Layer.cpp">
-      <Filter>Chili</Filter>
-    </ClCompile>
-    <ClCompile Include="LayerStack.cpp">
-      <Filter>Chili</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
