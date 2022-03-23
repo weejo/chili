@@ -22,7 +22,6 @@ project "ChiliEngine"
 	location "ChiliEngine"
 	kind "SharedLib"
 	language "C++"
-	toolset "v142"
 
 	targetdir ("bin/".. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/".. outputdir .. "/%{prj.name}")
