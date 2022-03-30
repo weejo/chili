@@ -28,7 +28,7 @@ namespace Chili {
 	{
 		Shutdown();
 	}
-
+	// This init function initializes GLFW, GLFW callbacks and other interactions with GLFW
 	void WindowsWindow::Init(const WindowProperties& properties)
 	{
 		m_Data.Title = properties.Title;

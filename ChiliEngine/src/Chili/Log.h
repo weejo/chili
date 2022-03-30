@@ -20,13 +20,14 @@ namespace Chili {
 
 	};
 }
-
+// Macros for the in-engine logging
 #define CH_CORE_TRACE(...)	::Chili::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define CH_CORE_INFO(...)	::Chili::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define CH_CORE_WARN(...)	::Chili::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define CH_CORE_ERROR(...)	::Chili::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define CH_CORE_FATAL(...)	::Chili::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
+// Macros for client logging
 #define CH_TRACE(...)	::Chili::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define CH_INFO(...)	::Chili::Log::GetClientLogger()->info(__VA_ARGS__)
 #define CH_WARN(...)	::Chili::Log::GetClientLogger()->warn(__VA_ARGS__)
