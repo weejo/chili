@@ -7,3 +7,6 @@
 /.vs/ChiliEngine/v16
 /bin-int/Debug-windows-x86_64
 /bin/Debug-windows-x86_64
+
+*.sln
+*.vcxproj
